@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-slate-100 font-sans text-[13px] leading-[1.45] text-slate-800 antialiased;
+    font-feature-settings: "tnum" 1, "cv11" 1;
+  }
+  button, [role="button"] { @apply touch-manipulation; }
+  details > summary { list-style: none; }
+  details > summary::-webkit-details-marker { display: none; }
+  input[type="range"] { @apply h-6 w-full cursor-pointer accent-slate-900; }
+}
+
+@layer utilities {
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .pb-nav { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom)); }
+}

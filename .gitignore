@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+.next/
+__pycache__/
+.DS_Store
+*.db
+*.db-shm
+*.db-wal
+# warmed caches so a cold Render restart is fast
+!backend/data/push.db
+!backend/data/pull.db
+!backend/data/concalls.db
